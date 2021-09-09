@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Code starts from here */
+#wrapper {
+  background: pink;
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+}
+
+#wrapper > section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+
+  justify-content: center;
+  grid-gap: 5px;
+}
+
+section > div {
+  background: #eee;
+  border-radius: 10px;
+}
+/* Here you can introduce your media query*/
+@media (min-width: 681px) {
+  #wrapper {
+    background: #fffcf1;
+  }
+  #wrapper > section {
+    width: 800px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
